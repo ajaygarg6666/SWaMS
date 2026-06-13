@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-bg-page: #F4F6F4;
+  --color-bg-sidebar: #FFFFFF;
+  --color-bg-card: #FFFFFF;
+  --color-green-primary: #1E5E3A;
+  --color-green-medium: #4CAF7D;
+  --color-green-light: #A8D5B5;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5E7EB;
+  --color-white: #FFFFFF;
+  --color-danger: #EF4444;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  background-color: #F4F6F4;
+  color: #1A1A1A;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #F4F6F4;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================
+   Card System
+   ============================ */
+
+.swams-card,
+.glass-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.swams-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* ============================
+   Buttons
+   ============================ */
+
+.btn-primary,
+.btn-lime {
+  background: #1E5E3A;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover,
+.btn-lime:hover {
+  background: #174d30;
+}
+
+.btn-primary:active,
+.btn-lime:active {
+  transform: scale(0.97);
+}
+
+.btn-ghost {
+  background: #FFFFFF;
+  color: #1E5E3A;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1.5px solid #1E5E3A;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-ghost:hover {
+  background: #E8F5EE;
+}
+
+.btn-ghost:active {
+  transform: scale(0.97);
+}
